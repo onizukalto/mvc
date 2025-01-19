@@ -1,0 +1,22 @@
+{
+    "processors": [
+      {
+        "id": "cpu1",
+        "name": "Ryzen 7 5800X",
+        "price": 449.99,
+        "type": "AMD",
+        "socketType": "AM4",
+        "tdp": 105,
+        "frequency": 3.8
+      },
+      {
+        "id": "cpu2",
+        "name": "Intel i7-12700K",
+        "price": 409.99,
+        "type": "Intel",
+        "socketType": "LGA1700",
+        "tdp": 125,
+        "frequency": 3.6
+      }
+    ]
+  }

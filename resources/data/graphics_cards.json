@@ -1,0 +1,20 @@
+{
+    "graphics_cards": [
+      {
+        "id": "gpu1",
+        "name": "RTX 3080",
+        "price": 699.99,
+        "type": "A",
+        "compatibleMotherboards": "A,B",
+        "powerRequirement": 320
+      },
+      {
+        "id": "gpu2",
+        "name": "RX 6800 XT",
+        "price": 649.99,
+        "type": "B",
+        "compatibleMotherboards": "B",
+        "powerRequirement": 300
+      }
+    ]
+  }

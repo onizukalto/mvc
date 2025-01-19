@@ -1,0 +1,20 @@
+{
+    "motherboards": [
+      {
+        "id": "mb1",
+        "name": "ROG STRIX B550-F",
+        "price": 189.99,
+        "type": "A",
+        "socketType": "AM4",
+        "formFactor": "ATX"
+      },
+      {
+        "id": "mb2",
+        "name": "MSI MPG B550",
+        "price": 169.99,
+        "type": "B",
+        "socketType": "AM4",
+        "formFactor": "ATX"
+      }
+    ]
+  }
