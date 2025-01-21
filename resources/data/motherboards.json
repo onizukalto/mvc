@@ -1,20 +1,164 @@
 {
-    "motherboards": [
-      {
-        "id": "mb1",
-        "name": "ROG STRIX B550-F",
-        "price": 189.99,
-        "type": "A",
-        "socketType": "AM4",
-        "formFactor": "ATX"
-      },
-      {
-        "id": "mb2",
-        "name": "MSI MPG B550",
-        "price": 169.99,
-        "type": "B",
-        "socketType": "AM4",
-        "formFactor": "ATX"
-      }
-    ]
-  }
+  "motherboards": [
+    {
+      "id": "mb1",
+      "name": "ROG STRIX B550-F",
+      "price": 189.99,
+      "type": "A",
+      "socketType": "AM4",
+      "formFactor": "ATX"
+    },
+    {
+      "id": "mb2",
+      "name": "MSI MPG B550",
+      "price": 169.99,
+      "type": "B",
+      "socketType": "AM4",
+      "formFactor": "ATX"
+    },
+    {
+      "id": "mb3",
+      "name": "ASUS TUF Gaming X570-Plus",
+      "price": 199.99,
+      "type": "A",
+      "socketType": "AM4",
+      "formFactor": "ATX"
+    },
+    {
+      "id": "mb4",
+      "name": "Gigabyte A520M S2H",
+      "price": 79.99,
+      "type": "B",
+      "socketType": "AM4",
+      "formFactor": "Micro-ATX"
+    },
+    {
+      "id": "mb5",
+      "name": "MSI MEG Z590 ACE",
+      "price": 359.99,
+      "type": "A",
+      "socketType": "LGA1200",
+      "formFactor": "ATX"
+    },
+    {
+      "id": "mb6",
+      "name": "ASUS PRIME H610M-E",
+      "price": 119.99,
+      "type": "B",
+      "socketType": "LGA1700",
+      "formFactor": "Micro-ATX"
+    },
+    {
+      "id": "mb7",
+      "name": "Gigabyte Z790 AORUS Elite",
+      "price": 299.99,
+      "type": "A",
+      "socketType": "LGA1700",
+      "formFactor": "ATX"
+    },
+    {
+      "id": "mb8",
+      "name": "ASRock B450M Pro4",
+      "price": 109.99,
+      "type": "B",
+      "socketType": "AM4",
+      "formFactor": "Micro-ATX"
+    },
+    {
+      "id": "mb9",
+      "name": "MSI MAG B660M Mortar",
+      "price": 179.99,
+      "type": "A",
+      "socketType": "LGA1700",
+      "formFactor": "Micro-ATX"
+    },
+    {
+      "id": "mb10",
+      "name": "ASUS ROG Maximus Z690 Hero",
+      "price": 499.99,
+      "type": "A",
+      "socketType": "LGA1700",
+      "formFactor": "ATX"
+    },
+    {
+      "id": "mb11",
+      "name": "Gigabyte B660M DS3H",
+      "price": 139.99,
+      "type": "B",
+      "socketType": "LGA1700",
+      "formFactor": "Micro-ATX"
+    },
+    {
+      "id": "mb12",
+      "name": "ASRock Z790 Taichi",
+      "price": 379.99,
+      "type": "A",
+      "socketType": "LGA1700",
+      "formFactor": "ATX"
+    },
+    {
+      "id": "mb13",
+      "name": "MSI PRO B650M-A",
+      "price": 159.99,
+      "type": "B",
+      "socketType": "AM5",
+      "formFactor": "Micro-ATX"
+    },
+    {
+      "id": "mb14",
+      "name": "ASUS TUF Gaming B760M-PLUS",
+      "price": 179.99,
+      "type": "A",
+      "socketType": "LGA1700",
+      "formFactor": "Micro-ATX"
+    },
+    {
+      "id": "mb15",
+      "name": "Gigabyte X570 AORUS Master",
+      "price": 349.99,
+      "type": "A",
+      "socketType": "AM4",
+      "formFactor": "ATX"
+    },
+    {
+      "id": "mb16",
+      "name": "ASRock H510M-HVS",
+      "price": 79.99,
+      "type": "B",
+      "socketType": "LGA1200",
+      "formFactor": "Micro-ATX"
+    },
+    {
+      "id": "mb17",
+      "name": "MSI MPG B760I Edge",
+      "price": 209.99,
+      "type": "A",
+      "socketType": "LGA1700",
+      "formFactor": "Mini-ITX"
+    },
+    {
+      "id": "mb18",
+      "name": "ASUS ROG Crosshair VIII Dark Hero",
+      "price": 429.99,
+      "type": "A",
+      "socketType": "AM4",
+      "formFactor": "ATX"
+    },
+    {
+      "id": "mb19",
+      "name": "Gigabyte Z590 Vision G",
+      "price": 239.99,
+      "type": "A",
+      "socketType": "LGA1200",
+      "formFactor": "ATX"
+    },
+    {
+      "id": "mb20",
+      "name": "ASRock B550M Steel Legend",
+      "price": 149.99,
+      "type": "B",
+      "socketType": "AM4",
+      "formFactor": "Micro-ATX"
+    }
+  ]
+}
