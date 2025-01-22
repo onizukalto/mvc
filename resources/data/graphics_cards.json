@@ -1,20 +1,164 @@
 {
-    "graphics_cards": [
-      {
-        "id": "gpu1",
-        "name": "RTX 3080",
-        "price": 699.99,
-        "type": "A",
-        "compatibleMotherboards": "A,B",
-        "powerRequirement": 320
-      },
-      {
-        "id": "gpu2",
-        "name": "RX 6800 XT",
-        "price": 649.99,
-        "type": "B",
-        "compatibleMotherboards": "B",
-        "powerRequirement": 300
-      }
-    ]
-  }
+  "graphics_cards": [
+    {
+      "id": "gpu1",
+      "name": "RTX 3080",
+      "price": 699.99,
+      "type": "A",
+      "compatibleMotherboards": "A,B",
+      "powerRequirement": 320
+    },
+    {
+      "id": "gpu2",
+      "name": "RX 6800 XT",
+      "price": 649.99,
+      "type": "B",
+      "compatibleMotherboards": "B",
+      "powerRequirement": 300
+    },
+    {
+      "id": "gpu3",
+      "name": "RTX 3090",
+      "price": 1499.99,
+      "type": "A",
+      "compatibleMotherboards": "A,B",
+      "powerRequirement": 350
+    },
+    {
+      "id": "gpu4",
+      "name": "RX 6900 XT",
+      "price": 999.99,
+      "type": "B",
+      "compatibleMotherboards": "B",
+      "powerRequirement": 340
+    },
+    {
+      "id": "gpu5",
+      "name": "RTX 3060",
+      "price": 399.99,
+      "type": "A",
+      "compatibleMotherboards": "A,B",
+      "powerRequirement": 170
+    },
+    {
+      "id": "gpu6",
+      "name": "RX 6700 XT",
+      "price": 479.99,
+      "type": "B",
+      "compatibleMotherboards": "B",
+      "powerRequirement": 230
+    },
+    {
+      "id": "gpu7",
+      "name": "RTX 3070",
+      "price": 599.99,
+      "type": "A",
+      "compatibleMotherboards": "A,B",
+      "powerRequirement": 220
+    },
+    {
+      "id": "gpu8",
+      "name": "RX 6650 XT",
+      "price": 349.99,
+      "type": "B",
+      "compatibleMotherboards": "B",
+      "powerRequirement": 180
+    },
+    {
+      "id": "gpu9",
+      "name": "RTX 3050",
+      "price": 279.99,
+      "type": "A",
+      "compatibleMotherboards": "A,B",
+      "powerRequirement": 130
+    },
+    {
+      "id": "gpu10",
+      "name": "RX 6400",
+      "price": 179.99,
+      "type": "B",
+      "compatibleMotherboards": "B",
+      "powerRequirement": 75
+    },
+    {
+      "id": "gpu11",
+      "name": "RTX 4080",
+      "price": 1199.99,
+      "type": "A",
+      "compatibleMotherboards": "A,B",
+      "powerRequirement": 320
+    },
+    {
+      "id": "gpu12",
+      "name": "RX 7900 XT",
+      "price": 899.99,
+      "type": "B",
+      "compatibleMotherboards": "B",
+      "powerRequirement": 300
+    },
+    {
+      "id": "gpu13",
+      "name": "RTX 4090",
+      "price": 1599.99,
+      "type": "A",
+      "compatibleMotherboards": "A,B",
+      "powerRequirement": 450
+    },
+    {
+      "id": "gpu14",
+      "name": "RX 7600",
+      "price": 269.99,
+      "type": "B",
+      "compatibleMotherboards": "B",
+      "powerRequirement": 165
+    },
+    {
+      "id": "gpu15",
+      "name": "RTX 4060 Ti",
+      "price": 399.99,
+      "type": "A",
+      "compatibleMotherboards": "A,B",
+      "powerRequirement": 160
+    },
+    {
+      "id": "gpu16",
+      "name": "RX 7800 XT",
+      "price": 499.99,
+      "type": "B",
+      "compatibleMotherboards": "B",
+      "powerRequirement": 260
+    },
+    {
+      "id": "gpu17",
+      "name": "RTX 2070",
+      "price": 499.99,
+      "type": "A",
+      "compatibleMotherboards": "A,B",
+      "powerRequirement": 175
+    },
+    {
+      "id": "gpu18",
+      "name": "RX 5700 XT",
+      "price": 399.99,
+      "type": "B",
+      "compatibleMotherboards": "B",
+      "powerRequirement": 225
+    },
+    {
+      "id": "gpu19",
+      "name": "RTX 2080 Ti",
+      "price": 1199.99,
+      "type": "A",
+      "compatibleMotherboards": "A,B",
+      "powerRequirement": 250
+    },
+    {
+      "id": "gpu20",
+      "name": "RX 5600 XT",
+      "price": 279.99,
+      "type": "B",
+      "compatibleMotherboards": "B",
+      "powerRequirement": 150
+    }
+  ]
+}

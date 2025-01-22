@@ -1,7 +1,7 @@
-// controller/ComponentController.java
 package controller;
 
 import model.Cart;
+import utils.Constants;
 import model.components.*;
 import model.compatibility.CompatibilityChecker;
 import model.data.DataLoader;
@@ -16,6 +16,9 @@ public class ComponentController {
     private DataLoader dataLoader;
     private List<GraphicsCard> graphicsCards;
     private List<Motherboard> motherboards;
+    private List<Processor> processors;
+    private List<Ram> rams;
+    private List<PowerSupply> powerSupplies;
 
     public ComponentController() {
         this.cart = new Cart();
@@ -29,6 +32,9 @@ public class ComponentController {
         try {
             graphicsCards = dataLoader.loadGraphicsCards();
             motherboards = dataLoader.loadMotherboards();
+            processors = dataLoader.loadProcessors();
+            rams = dataLoader.loadRam();
+            powerSupplies = dataLoader.loadPowerSupplies();
         } catch (Exception e) {
             consoleView.displayError("Erreur lors du chargement des données: " + e.getMessage());
         }
@@ -39,26 +45,35 @@ public class ComponentController {
         boolean running = true;
 
         while (running) {
-            consoleView.displayMainMenu();
+            displayMainMenu();
             int choice = consoleView.getIntInput();
 
             switch (choice) {
-                case 1:
-                    handleGraphicsCards();
-                    break;
-                case 2:
-                    handleMotherboards();
-                    break;
-                case 3:
-                    displayCart();
-                    break;
-                case 4:
-                    running = false;
-                    break;
-                default:
-                    consoleView.displayError("Option invalide");
+                case 1: handleGraphicsCards(); break;
+                case 2: handleMotherboards(); break;
+                case 3: handleProcessors(); break;
+                case 4: handleRam(); break;
+                case 5: handlePowerSupplies(); break;
+                case 6: displayCart(); break;
+                case 7: checkCompatibility(); break;
+                case 8: running = false; break;
+                default: consoleView.displayError("Option invalide");
             }
         }
+        consoleView.displayMessage(Constants.GOODBYE_MESSAGE);
+    }
+
+    private void displayMainMenu() {
+        consoleView.displayMessage("\nMenu Principal:");
+        consoleView.displayMessage("1. Voir les cartes graphiques");
+        consoleView.displayMessage("2. Voir les cartes mères");
+        consoleView.displayMessage("3. Voir les processeurs");
+        consoleView.displayMessage("4. Voir les RAM");
+        consoleView.displayMessage("5. Voir les alimentations");
+        consoleView.displayMessage("6. Voir le panier");
+        consoleView.displayMessage("7. Vérifier la compatibilité");
+        consoleView.displayMessage("8. Valider le panier et acheter");
+        consoleView.displayMessage("Votre choix: ");
     }
 
     private void handleGraphicsCards() {
@@ -68,7 +83,7 @@ public class ComponentController {
 
         if (choice > 0 && choice <= graphicsCards.size()) {
             GraphicsCard selectedCard = graphicsCards.get(choice - 1);
-            if (checkCompatibility(selectedCard)) {
+            if (checkCompatibilityBeforeAdding(selectedCard)) {
                 cart.addItem(selectedCard);
                 consoleView.displayMessage("Carte graphique ajoutée au panier!");
             }
@@ -86,19 +101,68 @@ public class ComponentController {
         }
     }
 
-    private boolean checkCompatibility(GraphicsCard card) {
-        // Vérifier si une carte mère est déjà dans le panier
-        for (Component item : cart.getItems()) {
-            if (item instanceof Motherboard) {
-                if (!CompatibilityChecker.isCompatible((Motherboard) item, card)) {
-                    consoleView.displayError("Cette carte graphique n'est pas compatible avec la carte mère sélectionnée!");
-                    return false;
-                }
-                return true;
+    private void handleProcessors() {
+        componentView.displayComponents(processors);
+        consoleView.displayMessage("\nEntrez le numéro du processeur (0 pour revenir): ");
+        int choice = consoleView.getIntInput();
+
+        if (choice > 0 && choice <= processors.size()) {
+            Processor selectedCPU = processors.get(choice - 1);
+            if (checkCompatibilityBeforeAdding(selectedCPU)) {
+                cart.addItem(selectedCPU);
+                consoleView.displayMessage("Processeur ajouté au panier!");
             }
         }
-        consoleView.displayMessage("Attention: Aucune carte mère n'est sélectionnée. Veuillez d'abord choisir une carte mère.");
-        return false;
+    }
+
+    private void handleRam() {
+        componentView.displayComponents(rams);
+        consoleView.displayMessage("\nEntrez le numéro de la RAM (0 pour revenir): ");
+        int choice = consoleView.getIntInput();
+
+        if (choice > 0 && choice <= rams.size()) {
+            cart.addItem(rams.get(choice - 1));
+            consoleView.displayMessage("RAM ajoutée au panier!");
+        }
+    }
+
+    private void handlePowerSupplies() {
+        componentView.displayComponents(powerSupplies);
+        consoleView.displayMessage("\nEntrez le numéro de l'alimentation (0 pour revenir): ");
+        int choice = consoleView.getIntInput();
+
+        if (choice > 0 && choice <= powerSupplies.size()) {
+            cart.addItem(powerSupplies.get(choice - 1));
+            consoleView.displayMessage("Alimentation ajoutée au panier!");
+        }
+    }
+
+    private boolean checkCompatibilityBeforeAdding(Component component) {
+        List<Component> tempCart = cart.getItems();
+        tempCart.add(component);
+        
+        String issues = CompatibilityChecker.getCompatibilityIssues(tempCart);
+        if (!issues.isEmpty()) {
+            consoleView.displayError("Problèmes de compatibilité détectés:");
+            consoleView.displayError(issues);
+            return false;
+        }
+        return true;
+    }
+
+    private void checkCompatibility() {
+        if (cart.getItems().isEmpty()) {
+            consoleView.displayMessage("Le panier est vide.");
+            return;
+        }
+
+        String issues = CompatibilityChecker.getCompatibilityIssues(cart.getItems());
+        if (issues.isEmpty()) {
+            consoleView.displayMessage("Tous les composants sont compatibles!");
+        } else {
+            consoleView.displayError("Problèmes de compatibilité détectés:");
+            consoleView.displayError(issues);
+        }
     }
 
     private void displayCart() {
@@ -113,5 +177,33 @@ public class ComponentController {
             consoleView.displayMessage((i + 1) + ". " + items.get(i));
         }
         consoleView.displayMessage(String.format("\nTotal: %.2f€", cart.getTotal()));
+
+        // Option pour supprimer un article
+        consoleView.displayMessage("\n1. Supprimer un article");
+        consoleView.displayMessage("2. Vider le panier");
+        consoleView.displayMessage("3. Retour");
+        consoleView.displayMessage("Votre choix: ");
+
+        int choice = consoleView.getIntInput();
+        switch (choice) {
+            case 1:
+                removeItemFromCart();
+                break;
+            case 2:
+                cart.clear();
+                consoleView.displayMessage("Panier vidé!");
+                break;
+        }
+    }
+
+    private void removeItemFromCart() {
+        consoleView.displayMessage("Entrez le numéro de l'article à supprimer: ");
+        int choice = consoleView.getIntInput();
+        if (choice > 0 && choice <= cart.getItems().size()) {
+            cart.removeItem(choice - 1);
+            consoleView.displayMessage("Article supprimé!");
+        } else {
+            consoleView.displayError("Numéro d'article invalide");
+        }
     }
 }

@@ -1,22 +1,184 @@
 {
-    "processors": [
-      {
-        "id": "cpu1",
-        "name": "Ryzen 7 5800X",
-        "price": 449.99,
-        "type": "AMD",
-        "socketType": "AM4",
-        "tdp": 105,
-        "frequency": 3.8
-      },
-      {
-        "id": "cpu2",
-        "name": "Intel i7-12700K",
-        "price": 409.99,
-        "type": "Intel",
-        "socketType": "LGA1700",
-        "tdp": 125,
-        "frequency": 3.6
-      }
-    ]
-  }
+  "processors": [
+    {
+      "id": "cpu1",
+      "name": "Ryzen 7 5800X",
+      "price": 449.99,
+      "type": "AMD",
+      "socketType": "AM4",
+      "tdp": 105,
+      "frequency": 3.8
+    },
+    {
+      "id": "cpu2",
+      "name": "Intel i7-12700K",
+      "price": 409.99,
+      "type": "Intel",
+      "socketType": "LGA1700",
+      "tdp": 125,
+      "frequency": 3.6
+    },
+    {
+      "id": "cpu3",
+      "name": "Ryzen 9 5900X",
+      "price": 549.99,
+      "type": "AMD",
+      "socketType": "AM4",
+      "tdp": 105,
+      "frequency": 3.7
+    },
+    {
+      "id": "cpu4",
+      "name": "Intel i9-12900K",
+      "price": 599.99,
+      "type": "Intel",
+      "socketType": "LGA1700",
+      "tdp": 125,
+      "frequency": 3.2
+    },
+    {
+      "id": "cpu5",
+      "name": "Ryzen 5 5600X",
+      "price": 299.99,
+      "type": "AMD",
+      "socketType": "AM4",
+      "tdp": 65,
+      "frequency": 3.7
+    },
+    {
+      "id": "cpu6",
+      "name": "Intel i5-12600K",
+      "price": 319.99,
+      "type": "Intel",
+      "socketType": "LGA1700",
+      "tdp": 125,
+      "frequency": 3.7
+    },
+    {
+      "id": "cpu7",
+      "name": "Ryzen 7 7700X",
+      "price": 399.99,
+      "type": "AMD",
+      "socketType": "AM5",
+      "tdp": 105,
+      "frequency": 4.5
+    },
+    {
+      "id": "cpu8",
+      "name": "Intel i3-12100F",
+      "price": 109.99,
+      "type": "Intel",
+      "socketType": "LGA1700",
+      "tdp": 58,
+      "frequency": 3.3
+    },
+    {
+      "id": "cpu9",
+      "name": "Ryzen 9 7950X",
+      "price": 699.99,
+      "type": "AMD",
+      "socketType": "AM5",
+      "tdp": 170,
+      "frequency": 4.5
+    },
+    {
+      "id": "cpu10",
+      "name": "Intel i9-13900K",
+      "price": 659.99,
+      "type": "Intel",
+      "socketType": "LGA1700",
+      "tdp": 125,
+      "frequency": 3.0
+    },
+    {
+      "id": "cpu11",
+      "name": "Ryzen 5 7600X",
+      "price": 299.99,
+      "type": "AMD",
+      "socketType": "AM5",
+      "tdp": 105,
+      "frequency": 4.7
+    },
+    {
+      "id": "cpu12",
+      "name": "Intel i5-13400",
+      "price": 249.99,
+      "type": "Intel",
+      "socketType": "LGA1700",
+      "tdp": 65,
+      "frequency": 2.5
+    },
+    {
+      "id": "cpu13",
+      "name": "Ryzen 3 5300G",
+      "price": 149.99,
+      "type": "AMD",
+      "socketType": "AM4",
+      "tdp": 65,
+      "frequency": 4.0
+    },
+    {
+      "id": "cpu14",
+      "name": "Intel Pentium G7400",
+      "price": 89.99,
+      "type": "Intel",
+      "socketType": "LGA1700",
+      "tdp": 46,
+      "frequency": 3.7
+    },
+    {
+      "id": "cpu15",
+      "name": "Ryzen Threadripper 3990X",
+      "price": 3999.99,
+      "type": "AMD",
+      "socketType": "sTRX4",
+      "tdp": 280,
+      "frequency": 2.9
+    },
+    {
+      "id": "cpu16",
+      "name": "Intel Xeon W-3175X",
+      "price": 2999.99,
+      "type": "Intel",
+      "socketType": "LGA3647",
+      "tdp": 255,
+      "frequency": 3.1
+    },
+    {
+      "id": "cpu17",
+      "name": "Ryzen 5 4600G",
+      "price": 189.99,
+      "type": "AMD",
+      "socketType": "AM4",
+      "tdp": 65,
+      "frequency": 3.7
+    },
+    {
+      "id": "cpu18",
+      "name": "Intel Celeron G6900",
+      "price": 59.99,
+      "type": "Intel",
+      "socketType": "LGA1700",
+      "tdp": 46,
+      "frequency": 3.4
+    },
+    {
+      "id": "cpu19",
+      "name": "Ryzen 7 5700G",
+      "price": 359.99,
+      "type": "AMD",
+      "socketType": "AM4",
+      "tdp": 65,
+      "frequency": 3.8
+    },
+    {
+      "id": "cpu20",
+      "name": "Intel i7-13700KF",
+      "price": 419.99,
+      "type": "Intel",
+      "socketType": "LGA1700",
+      "tdp": 125,
+      "frequency": 3.4
+    }
+  ]
+}

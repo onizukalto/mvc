@@ -1,4 +1,3 @@
-// model/Cart.java
 package model;
 
 import model.components.Component;

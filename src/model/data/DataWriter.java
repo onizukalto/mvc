@@ -1,4 +1,4 @@
-package model.data;
+/*package model.data;
 
 import model.components.Component;
 import utils.JsonHandler;
@@ -29,4 +29,4 @@ public class DataWriter {
 
         jsonHandler.writeJsonArray(jsonData, filepath);
     }
-}
+}*/
