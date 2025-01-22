@@ -1,0 +1,184 @@
+{
+  "power_supplies": [
+    {
+      "id": "psu1",
+      "name": "Corsair RM850x",
+      "price": 139.99,
+      "type": "ATX",
+      "wattage": 850,
+      "certification": "80+ Gold",
+      "modular": true
+    },
+    {
+      "id": "psu2",
+      "name": "EVGA SuperNOVA 750 G5",
+      "price": 129.99,
+      "type": "ATX",
+      "wattage": 750,
+      "certification": "80+ Gold",
+      "modular": true
+    },
+    {
+      "id": "psu3",
+      "name": "Seasonic Focus GX-650",
+      "price": 119.99,
+      "type": "ATX",
+      "wattage": 650,
+      "certification": "80+ Gold",
+      "modular": true
+    },
+    {
+      "id": "psu4",
+      "name": "Thermaltake Smart 600W",
+      "price": 69.99,
+      "type": "ATX",
+      "wattage": 600,
+      "certification": "80+ White",
+      "modular": false
+    },
+    {
+      "id": "psu5",
+      "name": "Cooler Master MWE 550",
+      "price": 59.99,
+      "type": "ATX",
+      "wattage": 550,
+      "certification": "80+ Bronze",
+      "modular": false
+    },
+    {
+      "id": "psu6",
+      "name": "Be Quiet! Straight Power 11 750W",
+      "price": 149.99,
+      "type": "ATX",
+      "wattage": 750,
+      "certification": "80+ Platinum",
+      "modular": true
+    },
+    {
+      "id": "psu7",
+      "name": "NZXT C750",
+      "price": 129.99,
+      "type": "ATX",
+      "wattage": 750,
+      "certification": "80+ Gold",
+      "modular": true
+    },
+    {
+      "id": "psu8",
+      "name": "Corsair CX550M",
+      "price": 79.99,
+      "type": "ATX",
+      "wattage": 550,
+      "certification": "80+ Bronze",
+      "modular": true
+    },
+    {
+      "id": "psu9",
+      "name": "EVGA 600 W1",
+      "price": 49.99,
+      "type": "ATX",
+      "wattage": 600,
+      "certification": "80+ White",
+      "modular": false
+    },
+    {
+      "id": "psu10",
+      "name": "Seasonic Prime TX-1000",
+      "price": 299.99,
+      "type": "ATX",
+      "wattage": 1000,
+      "certification": "80+ Titanium",
+      "modular": true
+    },
+    {
+      "id": "psu11",
+      "name": "Thermaltake Toughpower GF1 850W",
+      "price": 139.99,
+      "type": "ATX",
+      "wattage": 850,
+      "certification": "80+ Gold",
+      "modular": true
+    },
+    {
+      "id": "psu12",
+      "name": "Corsair SF750",
+      "price": 179.99,
+      "type": "SFX",
+      "wattage": 750,
+      "certification": "80+ Platinum",
+      "modular": true
+    },
+    {
+      "id": "psu13",
+      "name": "Be Quiet! Pure Power 11 500W",
+      "price": 69.99,
+      "type": "ATX",
+      "wattage": 500,
+      "certification": "80+ Gold",
+      "modular": false
+    },
+    {
+      "id": "psu14",
+      "name": "Cooler Master V850",
+      "price": 159.99,
+      "type": "ATX",
+      "wattage": 850,
+      "certification": "80+ Gold",
+      "modular": true
+    },
+    {
+      "id": "psu15",
+      "name": "Gigabyte P750GM",
+      "price": 119.99,
+      "type": "ATX",
+      "wattage": 750,
+      "certification": "80+ Gold",
+      "modular": true
+    },
+    {
+      "id": "psu16",
+      "name": "ASUS ROG Thor 1200P",
+      "price": 349.99,
+      "type": "ATX",
+      "wattage": 1200,
+      "certification": "80+ Platinum",
+      "modular": true
+    },
+    {
+      "id": "psu17",
+      "name": "Seasonic Core GC-500",
+      "price": 69.99,
+      "type": "ATX",
+      "wattage": 500,
+      "certification": "80+ Gold",
+      "modular": false
+    },
+    {
+      "id": "psu18",
+      "name": "EVGA 850 P6",
+      "price": 149.99,
+      "type": "ATX",
+      "wattage": 850,
+      "certification": "80+ Platinum",
+      "modular": true
+    },
+    {
+      "id": "psu19",
+      "name": "Thermaltake Smart BM2 600W",
+      "price": 79.99,
+      "type": "ATX",
+      "wattage": 600,
+      "certification": "80+ Bronze",
+      "modular": true
+    },
+    {
+      "id": "psu20",
+      "name": "Corsair HX1200",
+      "price": 249.99,
+      "type": "ATX",
+      "wattage": 1200,
+      "certification": "80+ Platinum",
+      "modular": true
+    }
+  ]
+}
