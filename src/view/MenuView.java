@@ -1,7 +1,14 @@
 // view/MenuView.java
 package view;
 
+/**
+ * Gère l'affichage des différents menus de l'application de configuration de PC.
+ * Fournit des méthodes pour afficher les menus principaux et de sous-menus.
+ */
 public class MenuView {
+    /**
+     * Affiche le menu principal de l'application.
+     */
     public void displayMainMenu() {
         System.out.println("\n=== Menu Principal ===");
         System.out.println("1. Voir les composants disponibles");
@@ -12,6 +19,9 @@ public class MenuView {
         System.out.print("Votre choix : ");
     }
 
+    /**
+     * Affiche le menu de sélection des types de composants.
+     */
     public void displayComponentMenu() {
         System.out.println("\n=== Types de Composants ===");
         System.out.println("1. Cartes Graphiques");
@@ -22,6 +32,9 @@ public class MenuView {
         System.out.print("Votre choix : ");
     }
 
+    /**
+     * Affiche le menu des options du panier.
+     */
     public void displayCartMenu() {
         System.out.println("\n=== Options du Panier ===");
         System.out.println("1. Voir le contenu");

@@ -1,6 +1,10 @@
 // model/components/Processor.java
 package model.components;
 
+/**
+ * Représente un processeur dans le système de configuration de PC.
+ * Étend la classe abstraite Component avec des propriétés spécifiques aux processeurs.
+ */
 public class Processor extends Component {
     private String socketType;
     private int tdp;
@@ -14,7 +18,24 @@ public class Processor extends Component {
         this.frequency = frequency;
     }
 
+    /**
+     * Récupère le type de socket du processeur.
+     * 
+     * @return Type de socket compatible
+     */
     public String getSocketType() { return socketType; }
+
+    /**
+     * Récupère la dissipation thermique du processeur.
+     * 
+     * @return Puissance thermique en watts
+     */
     public int getTdp() { return tdp; }
+
+    /**
+     * Récupère la fréquence du processeur.
+     * 
+     * @return Fréquence du processeur en GHz
+     */
     public double getFrequency() { return frequency; }
 }

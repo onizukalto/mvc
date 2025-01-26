@@ -9,6 +9,10 @@ import view.ConsoleView;
 import view.ComponentView;
 import java.util.List;
 
+/**
+ * Contrôleur principal de l'application de configuration de PC.
+ * Gère le chargement des données, les interactions utilisateur et la logique de sélection des composants.
+ */
 public class ComponentController {
     private Cart cart;
     private ConsoleView consoleView;
@@ -20,6 +24,11 @@ public class ComponentController {
     private List<Ram> rams;
     private List<PowerSupply> powerSupplies;
 
+
+     /**
+        * Contrôleur pour gérer les opérations sur les composants.
+        * Initialise les vues, le panier et charge les données nécessaires.
+    */
     public ComponentController() {
         this.cart = new Cart();
         this.consoleView = new ConsoleView();
@@ -28,6 +37,10 @@ public class ComponentController {
         loadData();
     }
 
+    /**
+     * Charge les données des différents composants à partir des fichiers.
+     * Gère les exceptions de chargement de données.
+     */
     private void loadData() {
         try {
             graphicsCards = dataLoader.loadGraphicsCards();
@@ -40,6 +53,9 @@ public class ComponentController {
         }
     }
 
+    /**
+     * Démarre l'application et gère la boucle principale du menu.
+     */
     public void start() {
         consoleView.displayWelcome();
         boolean running = true;
@@ -76,6 +92,9 @@ public class ComponentController {
         consoleView.displayMessage("Votre choix: ");
     }
 
+    /**
+     * Gère la sélection et l'ajout des cartes graphiques au panier.
+     */
     private void handleGraphicsCards() {
         componentView.displayComponents(graphicsCards);
         consoleView.displayMessage("\nEntrez le numéro de la carte graphique (0 pour revenir): ");
@@ -90,6 +109,9 @@ public class ComponentController {
         }
     }
 
+    /**
+     * Gère la sélection et l'ajout des cartes mères au panier.
+     */
     private void handleMotherboards() {
         componentView.displayComponents(motherboards);
         consoleView.displayMessage("\nEntrez le numéro de la carte mère (0 pour revenir): ");
@@ -101,6 +123,9 @@ public class ComponentController {
         }
     }
 
+    /**
+     * Gère la sélection et l'ajout des processeurs au panier.
+     */
     private void handleProcessors() {
         componentView.displayComponents(processors);
         consoleView.displayMessage("\nEntrez le numéro du processeur (0 pour revenir): ");
@@ -115,6 +140,9 @@ public class ComponentController {
         }
     }
 
+    /**
+     * Gère la sélection et l'ajout des modules RAM au panier.
+     */
     private void handleRam() {
         componentView.displayComponents(rams);
         consoleView.displayMessage("\nEntrez le numéro de la RAM (0 pour revenir): ");
@@ -126,6 +154,9 @@ public class ComponentController {
         }
     }
 
+    /**
+     * Gère la sélection et l'ajout des alimentations au panier.
+     */
     private void handlePowerSupplies() {
         componentView.displayComponents(powerSupplies);
         consoleView.displayMessage("\nEntrez le numéro de l'alimentation (0 pour revenir): ");
@@ -137,6 +168,12 @@ public class ComponentController {
         }
     }
 
+    /**
+     * Vérifie la compatibilité des composants avant leur ajout au panier.
+     * 
+     * @param component Le composant à vérifier
+     * @return Vrai si le composant est compatible, faux sinon
+     */
     private boolean checkCompatibilityBeforeAdding(Component component) {
         List<Component> tempCart = cart.getItems();
         tempCart.add(component);
@@ -150,6 +187,9 @@ public class ComponentController {
         return true;
     }
 
+    /**
+     * Vérifie la compatibilité globale des composants du panier.
+     */
     private void checkCompatibility() {
         if (cart.getItems().isEmpty()) {
             consoleView.displayMessage("Le panier est vide.");
@@ -165,6 +205,9 @@ public class ComponentController {
         }
     }
 
+    /**
+     * Affiche le contenu du panier et propose des options de gestion.
+     */
     private void displayCart() {
         List<Component> items = cart.getItems();
         if (items.isEmpty()) {
@@ -196,6 +239,9 @@ public class ComponentController {
         }
     }
 
+    /**
+     * Permet de supprimer un article spécifique du panier.
+     */
     private void removeItemFromCart() {
         consoleView.displayMessage("Entrez le numéro de l'article à supprimer: ");
         int choice = consoleView.getIntInput();

@@ -3,15 +3,41 @@ package model.compatibility;
 import model.components.*;
 import java.util.List;
 
+/**
+ * Gestionnaire de vérification de compatibilité entre les composants PC.
+ * Fournit des méthodes statiques pour vérifier la compatibilité des différents composants.
+ */
 public class CompatibilityChecker {
+    
+    /**
+     * Vérifie la compatibilité entre une carte mère et une carte graphique.
+     * 
+     * @param motherboard Carte mère à vérifier
+     * @param graphicsCard Carte graphique à vérifier
+     * @return Vrai si les composants sont compatibles, faux sinon
+     */
     public static boolean isCompatible(Motherboard motherboard, GraphicsCard graphicsCard) {
         return graphicsCard.getCompatibleMotherboards().contains(motherboard.getType());
     }
 
+    /**
+     * Vérifie la compatibilité entre une carte mère et un processeur.
+     * 
+     * @param motherboard Carte mère à vérifier
+     * @param processor Processeur à vérifier
+     * @return Vrai si les composants sont compatibles, faux sinon
+     */
     public static boolean isCompatible(Motherboard motherboard, Processor processor) {
         return motherboard.getSocketType().equals(processor.getSocketType());
     }
 
+    /**
+     * Vérifie si l'alimentation est suffisante pour les composants sélectionnés.
+     * 
+     * @param psu Alimentation à vérifier
+     * @param components Liste des composants à alimenter
+     * @return Vrai si l'alimentation est suffisante, faux sinon
+     */
     public static boolean isCompatible(PowerSupply psu, List<Component> components) {
         int totalPower = components.stream()
             .filter(c -> c instanceof GraphicsCard)
@@ -29,6 +55,12 @@ public class CompatibilityChecker {
         return psu.getWattage() >= totalPower;
     }
 
+    /**
+     * Récupère les problèmes de compatibilité dans une liste de composants.
+     * 
+     * @param components Liste des composants à vérifier
+     * @return Chaîne contenant les problèmes de compatibilité, vide si aucun problème
+     */
     public static String getCompatibilityIssues(List<Component> components) {
         StringBuilder issues = new StringBuilder();
 

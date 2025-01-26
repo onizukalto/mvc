@@ -6,6 +6,11 @@ import utils.Constants;
 import java.util.*;
 import java.io.IOException;
 
+
+/**
+ * Gestionnaire de chargement des données de composants à partir de fichiers JSON.
+ * Charge les différents types de composants (cartes graphiques, processeurs, etc.).
+ */
 public class DataLoader {
     private final JsonHandler jsonHandler;
 
@@ -13,6 +18,12 @@ public class DataLoader {
         this.jsonHandler = new JsonHandler();
     }
 
+    /**
+     * Charge les cartes graphiques depuis le fichier JSON.
+     * 
+     * @return Liste des cartes graphiques
+     * @throws IOException En cas d'erreur de lecture du fichier
+     */
     public List<GraphicsCard> loadGraphicsCards() throws IOException {
         List<GraphicsCard> cards = new ArrayList<>();
         List<Map<String, String>> data = jsonHandler.readJsonArray(Constants.GRAPHICS_CARDS_PATH);
@@ -30,6 +41,12 @@ public class DataLoader {
         return cards;
     }
 
+    /**
+     * Charge les cartes mères depuis le fichier JSON.
+     * 
+     * @return Liste des cartes mères
+     * @throws IOException En cas d'erreur de lecture du fichier
+     */
     public List<Motherboard> loadMotherboards() throws IOException {
         List<Motherboard> motherboards = new ArrayList<>();
         List<Map<String, String>> data = jsonHandler.readJsonArray("resources/data/motherboards.json");
@@ -47,6 +64,12 @@ public class DataLoader {
         return motherboards;
     }
 
+    /**
+     * Charge les processeurs depuis le fichier JSON.
+     * 
+     * @return Liste des processeurs
+     * @throws IOException En cas d'erreur de lecture du fichier
+     */
      public List<Processor> loadProcessors() throws IOException {
         List<Processor> processors = new ArrayList<>();
         List<Map<String, String>> data = jsonHandler.readJsonArray(Constants.PROCESSORS_PATH);
@@ -65,6 +88,12 @@ public class DataLoader {
         return processors;
     }
 
+    /**
+     * Charge la liste des RAM depuis le fichier JSON.
+     * 
+     * @return Liste des RAM
+     * @throws IOException En cas d'erreur de lecture du fichier
+     */
     public List<Ram> loadRam() throws IOException {
         List<Ram> rams = new ArrayList<>();
         List<Map<String, String>> data = jsonHandler.readJsonArray(Constants.RAM_PATH);
@@ -83,6 +112,12 @@ public class DataLoader {
         return rams;
     }
 
+    /**
+     * Charge les alimentations depuis le fichier JSON.
+     * 
+     * @return Liste des alimentations
+     * @throws IOException En cas d'erreur de lecture du fichier
+     */
     public List<PowerSupply> loadPowerSupplies() throws IOException {
         List<PowerSupply> psus = new ArrayList<>();
         List<Map<String, String>> data = jsonHandler.readJsonArray(Constants.POWER_SUPPLIES_PATH);

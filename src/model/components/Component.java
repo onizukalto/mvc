@@ -1,6 +1,10 @@
 // model/components/Component.java
 package model.components;
 
+/**
+ * Classe abstraite représentant un composant générique.
+ * Sert de base pour tous les types de composants PC.
+ */
 public abstract class Component {
     protected String id;
     protected String name;
@@ -13,10 +17,33 @@ public abstract class Component {
         this.price = price;
         this.type = type;
     }
-
+    
+    /**
+     * Récupère l'identifiant unique du composant.
+     * 
+     * @return Identifiant du composant
+     */
     public String getId() { return id; }
+
+    /**
+     * Récupère le nom du composant.
+     * 
+     * @return Nom du composant
+     */
     public String getName() { return name; }
+
+    /**
+     * Récupère le prix du composant.
+     * 
+     * @return Prix du composant
+     */
     public double getPrice() { return price; }
+
+    /**
+     * Récupère le type du composant.
+     * 
+     * @return Type du composant
+     */
     public String getType() { return type; }
 
     @Override

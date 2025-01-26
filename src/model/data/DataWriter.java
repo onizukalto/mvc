@@ -1,3 +1,10 @@
+/**
+ * Gestionnaire d'écriture des données de composants dans des fichiers JSON.
+ * Permet de sauvegarder le contenu du panier.
+ * 
+ * @deprecated La classe est actuellement commentée dans le code source
+ */
+
 /*package model.data;
 
 import model.components.Component;

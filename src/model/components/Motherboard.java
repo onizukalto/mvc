@@ -1,6 +1,10 @@
 // model/components/Motherboard.java
 package model.components;
 
+/**
+ * Représente une carte mère dans le système de configuration de PC.
+ * Étend la classe abstraite Component avec des propriétés spécifiques aux cartes mères.
+ */
 public class Motherboard extends Component {
     private String socketType;
     private String formFactor;
@@ -12,6 +16,17 @@ public class Motherboard extends Component {
         this.formFactor = formFactor;
     }
 
+    /**
+     * Récupère le type de socket de la carte mère.
+     * 
+     * @return Type de socket (ex: LGA1200, AM4)
+     */
     public String getSocketType() { return socketType; }
+
+    /**
+     * Récupère le facteur de forme de la carte mère.
+     * 
+     * @return Facteur de forme (ex: ATX, micro-ATX)
+     */
     public String getFormFactor() { return formFactor; }
 }
