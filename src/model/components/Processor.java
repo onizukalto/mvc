@@ -38,4 +38,9 @@ public class Processor extends Component {
      * @return Fréquence du processeur en GHz
      */
     public double getFrequency() { return frequency; }
+
+    @Override
+    public String toString() {
+        return String.format("%s - %s\nFréquence : %.2fGHz - Type de socket : %s - (%.2f€)\n\n", name, type, frequency, socketType, price);
+    }
 }

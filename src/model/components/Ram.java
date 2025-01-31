@@ -13,7 +13,7 @@ public class Ram extends Component {
     public Ram(String id, String name, double price, String componentType,
               String ramType, int capacity, int speed) {
         super(id, name, price, componentType);
-        this.type = ramType;
+        this.type = componentType;
         this.capacity = capacity;
         this.speed = speed;
     }
@@ -38,4 +38,9 @@ public class Ram extends Component {
      * @return Vitesse en MHz
      */
     public int getSpeed() { return speed; }
+
+    @Override
+    public String toString() {
+        return String.format("%s - %s\n%d Go - %d MHz - (%.2f€)\n\n", name, type, capacity, speed, price);
+    }
 }

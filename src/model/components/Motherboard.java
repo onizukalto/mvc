@@ -29,4 +29,9 @@ public class Motherboard extends Component {
      * @return Facteur de forme (ex: ATX, micro-ATX)
      */
     public String getFormFactor() { return formFactor; }
+
+    @Override
+    public String toString() {
+        return String.format("%s - Socket : %s\n Type de carte mère : %s - (%.2f€)\n\n", name, socketType, formFactor, price);
+    }
 }

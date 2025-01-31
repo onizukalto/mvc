@@ -66,13 +66,8 @@ public class CompatibilityChecker {
 
         boolean hasMotherboard = components.stream().anyMatch(c -> c instanceof Motherboard);
         boolean hasCPU = components.stream().anyMatch(c -> c instanceof Processor);
-        //boolean hasRAM = components.stream().anyMatch(c -> c instanceof Ram);
         boolean hasPSU = components.stream().anyMatch(c -> c instanceof PowerSupply);
 
-        /*if (!hasMotherboard) issues.append("Carte mère manquante\n");
-        if (!hasCPU) issues.append("Processeur manquant\n");
-        if (!hasRAM) issues.append("RAM manquante\n");
-        if (!hasPSU) issues.append("Alimentation manquante\n");*/
 
         // Vérifications spécifiques si tous les composants essentiels sont présents
         if (hasMotherboard && hasCPU) {

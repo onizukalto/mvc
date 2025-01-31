@@ -61,7 +61,7 @@ public class ComponentController {
         boolean running = true;
 
         while (running) {
-            displayMainMenu();
+            consoleView.displayMainMenu();
             int choice = consoleView.getIntInput();
 
             switch (choice) {
@@ -79,18 +79,6 @@ public class ComponentController {
         consoleView.displayMessage(Constants.GOODBYE_MESSAGE);
     }
 
-    private void displayMainMenu() {
-        consoleView.displayMessage("\nMenu Principal:");
-        consoleView.displayMessage("1. Voir les cartes graphiques");
-        consoleView.displayMessage("2. Voir les cartes mères");
-        consoleView.displayMessage("3. Voir les processeurs");
-        consoleView.displayMessage("4. Voir les RAM");
-        consoleView.displayMessage("5. Voir les alimentations");
-        consoleView.displayMessage("6. Voir le panier");
-        consoleView.displayMessage("7. Vérifier la compatibilité");
-        consoleView.displayMessage("8. Valider le panier et acheter");
-        consoleView.displayMessage("Votre choix: ");
-    }
 
     /**
      * Gère la sélection et l'ajout des cartes graphiques au panier.
@@ -210,24 +198,8 @@ public class ComponentController {
      */
     private void displayCart() {
         List<Component> items = cart.getItems();
-        if (items.isEmpty()) {
-            consoleView.displayMessage("\nLe panier est vide");
-            return;
-        }
 
-        consoleView.displayMessage("\nContenu du panier:");
-        for (int i = 0; i < items.size(); i++) {
-            consoleView.displayMessage((i + 1) + ". " + items.get(i));
-        }
-        consoleView.displayMessage(String.format("\nTotal: %.2f€", cart.getTotal()));
-
-        // Option pour supprimer un article
-        consoleView.displayMessage("\n1. Supprimer un article");
-        consoleView.displayMessage("2. Vider le panier");
-        consoleView.displayMessage("3. Retour");
-        consoleView.displayMessage("Votre choix: ");
-
-        int choice = consoleView.getIntInput();
+        int choice = consoleView.displayCart(items, cart.getTotal());
         switch (choice) {
             case 1:
                 removeItemFromCart();

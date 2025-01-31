@@ -37,4 +37,12 @@ public class PowerSupply extends Component {
      * @return Vrai si l'alimentation est modulaire, faux sinon
      */
     public boolean isModular() { return modular; }
+    
+    @Override
+    public String toString() {
+        if(modular){
+            return String.format("%s - %s\n%sW - Modulaire - (%.2f€)\n\n", name, certification, wattage, price);
+        }
+        return String.format("%s - %s\n%sW - Non Modulaire - (%.2f€)\n\n", name, certification, wattage, price);
+    }
 }

@@ -29,4 +29,9 @@ public class GraphicsCard extends Component {
      * @return Puissance requise en watts
      */
     public int getPowerRequirement() { return powerRequirement; }
+
+    @Override
+    public String toString() {
+        return String.format("%s\nPuissance requise : %dW - (%.2f€)\n", name, powerRequirement, price);
+    }
 }
